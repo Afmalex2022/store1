@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض الصور</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .tabs button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .images img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align: center;">عرض الصور</h2>
+
+<div class="tabs">
+    <button onclick="openTab('tab1')">التبويب 1</button>
+    <button onclick="openTab('tab2')">التبويب 2</button>
+    <button onclick="openTab('tab3')">التبويب 3</button>
+</div>
+
+<div id="tab1" class="tab-content">
+    <h3>التبويب 1</h3>
+    <div class="images">
+        <img src="images/pic1 (1).jpeg" alt="Image 1">
+        <img src="images/pic1 (2).jpeg" alt="Image 2">
+    </div>
+</div>
+
+<div id="tab2" class="tab-content">
+    <h3>التبويب 2</h3>
+    <div class="images">
+        <img src="images/pic1 (3).jpeg" alt="Image 3">
+        <img src="images/pic1 (4).jpeg.jpg" alt="Image 4">
+    </div>
+</div>
+
+<div id="tab3" class="tab-content">
+    <h3>التبويب 3</h3>
+    <div class="images">
+        <img src="images/pic1 (5).jpeg" alt="Image 5">
+        <img src="images/pic1 (6).jpeg" alt="Image 6">
+    </div>
+</div>
+
+<script>
+    function openTab(tabId) {
+        var i, tabContent;
+        tabContent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabContent.length; i++) {
+            tabContent[i].classList.remove("active");
+        }
+        document.getElementById(tabId).classList.add("active");
+    }
+    // افتح أول تبويب بشكل افتراضي
+    openTab('tab1');
+</script>
+
+</body>
+</html>

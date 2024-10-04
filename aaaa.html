@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - رفع الصور</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        form {
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            width: 300px;
+        }
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>رفع الصور</h2>
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    <label>اختر الصورة لرفعها:</label>
+    <input type="file" name="fileToUpload" id="fileToUpload">
+    <input type="submit" value="رفع الصورة" name="submit">
+</form>
+
+</body>
+</html>
